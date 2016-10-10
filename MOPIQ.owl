@@ -15,7 +15,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl">
-        <owl:versionIRI rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl/16.05.16"/>
+        <owl:versionIRI rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl/16.10.06"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl"/>
     </owl:Ontology>
     
@@ -197,6 +197,8 @@
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000005"/>
                             <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000034"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000044"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000059"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -368,10 +370,27 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#DSQ_0000001"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000001"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000005"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000060"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#DSQ_0000001"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000001"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000005"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000060"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000061"/>
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000302"/>
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000002"/>
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000003"/>
@@ -380,13 +399,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#DSQ_0000001"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -436,6 +448,7 @@
                             <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000006"/>
                             <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000037"/>
                             <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000038"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -1490,6 +1503,24 @@ If there is more than one drug day, they must be non-overlapping and connected.<
     
 
 
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000044 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000106"/>
+        <rdfs:label xml:lang="en">MOPIQ no prolongation specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000045 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000045">
+        <rdfs:subClassOf rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000001"/>
+        <rdfs:label xml:lang="en">MOPIQ drug administration and dispensing initiation specification</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000046 -->
 
     <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000046">
@@ -1580,6 +1611,302 @@ If there is more than one drug day, they must be non-overlapping and connected.<
     <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000057">
         <rdfs:subClassOf rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000053"/>
         <rdfs:label xml:lang="en">MOPIQ it is some time after noon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000058 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000058">
+        <rdfs:subClassOf rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000001"/>
+        <rdfs:label xml:lang="en">MOPIQ drug administration and dispensing modification specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000059 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000106"/>
+        <rdfs:label xml:lang="en">MOPIQ no substitution specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000060 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#DSQ_0000001"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">MOPIQ drug protocol reference specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000061 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">MOPIQ for professional use indication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000062 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:comment>Information that is not required to be on a prescription</rdfs:comment>
+        <rdfs:label xml:lang="en">MOPIQ additional prescription information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000063 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000065"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000066"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000073"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000065"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000066"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">MOPIQ inpatient prescriber identification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000064 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000065"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000066"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000067"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000073"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000303"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000422"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000065"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000066"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000067"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IAO_0000422"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">MOPIQ outpatient prescriber identification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000065 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:label xml:lang="en">MOPIQ prescriber permit number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000066 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:label xml:lang="en">MOPIQ prescriber signature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000067 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:comment>to replace with preexisting entity</rdfs:comment>
+        <rdfs:label xml:lang="en">MOPIQ prescriber telephone number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000068 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000069"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000070"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000071"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000074"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000070"/>
+                            <rdf:Description rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000071"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000069"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000070"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000071"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">MOPIQ patient identification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000069 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:label xml:lang="en">MOPIQ patient name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000070 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:label xml:lang="en">MOPIQ patient date of birth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000071 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
+        <rdfs:label xml:lang="en">MOPIQ RAMQ identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000073 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:label xml:lang="en">MOPIQ health care provider name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000074 -->
+
+    <owl:Class rdf:about="http://med.usherbrooke.ca/PDRO/MOPIQ.owl#MOPIQ_0000074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:label xml:lang="en">MOPIQ additional identification elements</rdfs:label>
     </owl:Class>
     
 
